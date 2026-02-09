@@ -11,11 +11,30 @@ function App() {
     }
   };
 
+  const trustedLogos = [
+    'Northwind',
+    'Crestview',
+    'Pioneer',
+    'Atlas',
+    'Juniper',
+    'Brightline',
+    'Lighthouse',
+    'Nimbus',
+    'Evergreen',
+    'Helix'
+  ];
+
+  const marqueeLogos = [...trustedLogos, ...trustedLogos];
+
   return (
-    <div className="min-h-screen bg-white font-sans text-brand-900 selection:bg-brand-900 selection:text-white">
-      
+    <div className="relative min-h-screen overflow-x-hidden font-sans text-brand-900 selection:bg-brand-900 selection:text-white">
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 bg-grid opacity-[0.16]"></div>
+      <div aria-hidden="true" className="pointer-events-none fixed -top-20 left-[6%] h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl animate-float-slow"></div>
+      <div aria-hidden="true" className="pointer-events-none fixed top-[35%] right-[-8%] h-96 w-96 rounded-full bg-cyan-500/10 blur-[120px] animate-float-reverse"></div>
+      <div aria-hidden="true" className="pointer-events-none fixed bottom-[-12%] left-[30%] h-80 w-80 rounded-full bg-brand-900/10 blur-[120px] animate-float-medium"></div>
+
       {/* Navigation - Light theme now */}
-      <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-brand-100">
+      <nav className="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-brand-100 shadow-[0_10px_30px_rgba(15,23,42,0.08)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex-shrink-0 flex items-center gap-3">
@@ -33,12 +52,33 @@ function App() {
         </div>
       </nav>
 
-      <main>
+      <main className="relative z-10">
         {/* Hero stays dark for B2B impact */}
         <Hero 
           onBookDemo={() => scrollToSection('contact')} 
           onSeeHow={() => scrollToSection('how-it-works')} 
         />
+
+        {/* Trusted Logos */}
+        <section className="relative py-12 md:py-16 bg-white/80 border-b border-brand-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-brand-400">Trusted By</p>
+              <h3 className="text-lg md:text-xl font-semibold text-brand-800 mt-3">
+                Teams who value credible leadership and long-term trust
+              </h3>
+            </div>
+          </div>
+          <div className="marquee">
+            <div className="marquee-track px-4 sm:px-6 lg:px-8">
+              {marqueeLogos.map((logo, idx) => (
+                <div key={`${logo}-${idx}`} className="logo-pill">
+                  {logo}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* 2. The Problem - Light Grey Background */}
         <section id="problem" className="py-24 md:py-32 bg-brand-50 border-y border-brand-100 px-4 sm:px-6 lg:px-8">
@@ -49,7 +89,7 @@ function App() {
                   The Challenge
                 </div>
                 <h2 className="text-3xl md:text-5xl font-bold text-brand-900 mb-8 leading-tight">
-                  Thought leadership is working. But it’s working too hard on <span className="text-cyan-600">rented platforms.</span>
+                  Thought leadership is working. But it's working too hard on <span className="text-cyan-600">rented platforms.</span>
                 </h2>
                 <div className="space-y-6 text-lg text-brand-600 font-normal leading-relaxed">
                   <p>
@@ -60,21 +100,21 @@ function App() {
                     And the value your leaders create never truly accumulates.
                   </p>
                   <p className="font-medium text-brand-900 border-l-4 border-cyan-500 pl-4 py-1">
-                    Thought leadership shouldn’t just be published. It should be owned.
+                    Thought leadership shouldn't just be published. It should be owned.
                   </p>
                 </div>
               </div>
               
               <div className="space-y-4">
-                <div className="p-8 rounded-xl bg-white border border-brand-200 shadow-sm hover:shadow-md transition-shadow">
+                <div className="p-8 rounded-xl bg-white border border-brand-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <h3 className="text-lg font-bold text-brand-900 mb-2">No owned audience</h3>
                   <p className="text-brand-500">You don't own the data. You can't export your followers.</p>
                 </div>
-                <div className="p-8 rounded-xl bg-white border border-brand-200 shadow-sm hover:shadow-md transition-shadow">
+                <div className="p-8 rounded-xl bg-white border border-brand-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <h3 className="text-lg font-bold text-brand-900 mb-2">No long-term content asset</h3>
                   <p className="text-brand-500">High-effort posts disappear after 24 hours.</p>
                 </div>
-                <div className="p-8 rounded-xl bg-white border border-brand-200 shadow-sm hover:shadow-md transition-shadow">
+                <div className="p-8 rounded-xl bg-white border border-brand-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <h3 className="text-lg font-bold text-brand-900 mb-2">No clear credibility link</h3>
                   <p className="text-brand-500">Hard to prove impact on complex sales cycles.</p>
                 </div>
@@ -89,9 +129,9 @@ function App() {
              <div className="inline-block px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-semibold mb-6 uppercase tracking-wide">
                   Introducing Insight Hub
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-brand-900 mb-8">A dedicated home for your leaders’ insight</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-brand-900 mb-8">A dedicated home for your leaders' insight</h2>
             <p className="text-xl text-brand-600 leading-relaxed font-light">
-              Insight Hub is a branded destination where your organisation’s thinking lives in one place. 
+              Insight Hub is a branded destination where your organisation's thinking lives in one place. 
               We help you capture sharp executive perspectives, publish them to a dedicated hub, and build a direct relationship with the people who matter most.
             </p>
           </div>
@@ -105,7 +145,7 @@ function App() {
               { title: "Performance Tracking", desc: "See exactly which companies are reading your content." },
               { title: "Compounding Asset", desc: "Content remains accessible and searchable, building value over time." }
             ].map((item, idx) => (
-              <div key={idx} className="p-8 rounded-2xl bg-white border border-brand-200 hover:border-cyan-200 hover:shadow-xl hover:shadow-cyan-900/5 transition-all duration-300 group">
+              <div key={idx} className="p-8 rounded-2xl bg-white border border-brand-200 hover:border-cyan-200 hover:shadow-xl hover:shadow-cyan-900/5 hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-cyan-50 rounded-xl mb-6 flex items-center justify-center text-cyan-600 group-hover:bg-cyan-500 group-hover:text-white transition-colors">
                   <div className="w-6 h-6 bg-current rounded-sm opacity-60"></div>
                 </div>
@@ -150,8 +190,8 @@ function App() {
                   desc: "Subscribers grow. Insights compound. Your credibility strengthens with every piece published." 
                 }
               ].map((item, idx) => (
-                <div key={idx} className="relative z-10 bg-brand-50 md:bg-transparent pt-8 md:pt-0 group text-center md:text-left">
-                  <div className="w-24 h-24 bg-white border-4 border-brand-100 group-hover:border-cyan-400 rounded-full flex items-center justify-center text-2xl font-bold text-brand-900 mx-auto md:mx-0 mb-6 z-10 transition-colors shadow-sm">
+                <div key={idx} className="relative z-10 bg-brand-50 md:bg-transparent pt-8 md:pt-0 group text-center md:text-left transition-transform duration-300 hover:-translate-y-1">
+                  <div className="w-24 h-24 bg-white border-4 border-brand-100 group-hover:border-cyan-400 rounded-full flex items-center justify-center text-2xl font-bold text-brand-900 mx-auto md:mx-0 mb-6 z-10 transition-all duration-300 shadow-sm group-hover:shadow-md group-hover:scale-105">
                     <span className="text-brand-300 group-hover:text-cyan-600 transition-colors">{item.step}</span>
                   </div>
                   <h3 className="text-xl font-bold text-brand-900 mb-3">{item.title}</h3>
@@ -179,44 +219,44 @@ function App() {
 
             <div className="grid grid-cols-2 gap-4">
               {/* LinkedIn Column */}
-              <div className="p-6 bg-brand-50 rounded-xl border border-brand-100">
+              <div className="p-6 bg-brand-50 rounded-xl border border-brand-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                 <div className="flex items-center gap-2 mb-6 text-brand-500 font-semibold uppercase tracking-wider text-sm">
                   <div className="w-2 h-2 rounded-full bg-brand-400"></div> LinkedIn Only
                 </div>
                 <ul className="space-y-4 text-sm text-brand-500">
                   <li className="flex gap-3 items-center">
-                    <span className="text-red-500 font-bold">×</span> Rented audience
+                    <span className="text-red-500 font-bold">x</span> Rented audience
                   </li>
                   <li className="flex gap-3 items-center">
-                    <span className="text-red-500 font-bold">×</span> Short lifespan
+                    <span className="text-red-500 font-bold">x</span> Short lifespan
                   </li>
                   <li className="flex gap-3 items-center">
-                    <span className="text-red-500 font-bold">×</span> Algorithm reliance
+                    <span className="text-red-500 font-bold">x</span> Algorithm reliance
                   </li>
                   <li className="flex gap-3 items-center">
-                    <span className="text-red-500 font-bold">×</span> No data ownership
+                    <span className="text-red-500 font-bold">x</span> No data ownership
                   </li>
                 </ul>
               </div>
 
               {/* Insight Hub Column */}
-              <div className="p-6 bg-white rounded-xl border border-cyan-200 shadow-xl shadow-cyan-900/5 relative overflow-hidden">
+              <div className="p-6 bg-white rounded-xl border border-cyan-200 shadow-xl shadow-cyan-900/5 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-300">
                 <div className="absolute top-0 left-0 w-full h-1 bg-cyan-500"></div>
                 <div className="flex items-center gap-2 mb-6 text-brand-900 font-bold uppercase tracking-wider text-sm">
                   <div className="w-2 h-2 rounded-full bg-cyan-500"></div> Insight Hub
                 </div>
                 <ul className="space-y-4 text-sm text-brand-900 font-medium">
                   <li className="flex gap-3 items-center">
-                    <span className="text-cyan-600 font-bold">✓</span> Owned audience
+                    <span className="text-cyan-600 font-bold">+</span> Owned audience
                   </li>
                   <li className="flex gap-3 items-center">
-                    <span className="text-cyan-600 font-bold">✓</span> Long-term value
+                    <span className="text-cyan-600 font-bold">+</span> Long-term value
                   </li>
                   <li className="flex gap-3 items-center">
-                    <span className="text-cyan-600 font-bold">✓</span> Direct access
+                    <span className="text-cyan-600 font-bold">+</span> Direct access
                   </li>
                   <li className="flex gap-3 items-center">
-                    <span className="text-cyan-600 font-bold">✓</span> Credibility asset
+                    <span className="text-cyan-600 font-bold">+</span> Credibility asset
                   </li>
                 </ul>
               </div>
@@ -225,8 +265,9 @@ function App() {
         </section>
 
         {/* 6. Who Insight Hub is for - Dark Section for Contrast */}
-        <section className="py-24 bg-brand-900 px-4 sm:px-6 lg:px-8">
-           <div className="max-w-7xl mx-auto">
+        <section className="py-24 bg-brand-900 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+           <div aria-hidden="true" className="pointer-events-none absolute -top-24 right-12 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl animate-float-slow"></div>
+           <div className="max-w-7xl mx-auto relative z-10">
              <div className="bg-brand-800 rounded-3xl p-8 md:p-20 border border-brand-700 flex flex-col md:flex-row gap-12 md:gap-20 shadow-2xl">
                <div className="md:w-1/2">
                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Built for organisations where credibility drives revenue</h2>
@@ -234,7 +275,7 @@ function App() {
                    Insight Hub is designed for senior leaders and organisations that compete on expertise, trust, and long-term reputation.
                  </p>
                  <div className="inline-block px-4 py-2 bg-brand-900/50 rounded-lg text-sm font-medium text-cyan-300 border border-brand-600">
-                   This is not high-volume content marketing. It’s thought leadership with purpose.
+                   This is not high-volume content marketing. It's thought leadership with purpose.
                  </div>
                </div>
                
@@ -262,15 +303,15 @@ function App() {
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-brand-900 mb-10">Already helping leaders own their thinking</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="p-8 rounded-2xl bg-brand-50 border border-brand-100">
+              <div className="p-8 rounded-2xl bg-brand-50 border border-brand-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <div className="text-4xl font-bold text-cyan-600 mb-2">Grow</div>
                 <p className="text-brand-600 text-sm font-medium">Subscriber bases around senior leaders</p>
               </div>
-              <div className="p-8 rounded-2xl bg-brand-50 border border-brand-100">
+              <div className="p-8 rounded-2xl bg-brand-50 border border-brand-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <div className="text-4xl font-bold text-cyan-600 mb-2">Engage</div>
                 <p className="text-brand-600 text-sm font-medium">Higher-quality engagement than social-only</p>
               </div>
-              <div className="p-8 rounded-2xl bg-brand-50 border border-brand-100">
+              <div className="p-8 rounded-2xl bg-brand-50 border border-brand-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 <div className="text-4xl font-bold text-cyan-600 mb-2">Close</div>
                 <p className="text-brand-600 text-sm font-medium">Sales teams using insights directly in deals</p>
               </div>
@@ -311,9 +352,9 @@ function App() {
             {[
               { q: "How much time does this require from our leaders?", a: "Minimal. We conduct a 45-minute interview once a month. Our team handles the strategy, writing, editing, and distribution." },
               { q: "Do we really need a separate hub?", a: "If you want to own your audience, yes. LinkedIn owns your followers; a Hub allows you to capture emails and track specific engagement data." },
-              { q: "How fast will we see results?", a: "We typically launch within 3 weeks. Audience growth is a compounding effect—expect to see meaningful subscriber data within the first quarter." }
+              { q: "How fast will we see results?", a: "We typically launch within 3 weeks. Audience growth is a compounding effect - expect to see meaningful subscriber data within the first quarter." }
             ].map((faq, i) => (
-              <div key={i} className="p-8 bg-white rounded-2xl border border-brand-200 hover:border-brand-300 transition-colors shadow-sm">
+              <div key={i} className="p-8 bg-white rounded-2xl border border-brand-200 hover:border-brand-300 transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1">
                 <h3 className="text-lg font-bold text-brand-900 mb-2">{faq.q}</h3>
                 <p className="text-brand-600 leading-relaxed">{faq.a}</p>
               </div>
@@ -335,22 +376,24 @@ function App() {
         </section>
 
         {/* Primary CTA / Form - Dark */}
-        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-brand-900">
-          <div className="max-w-5xl mx-auto bg-brand-800 rounded-3xl border border-brand-700 p-8 md:p-16 shadow-2xl flex flex-col md:flex-row gap-12">
+        <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-brand-900 overflow-hidden">
+          <div aria-hidden="true" className="pointer-events-none absolute -top-24 left-16 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl animate-float-medium"></div>
+          <div aria-hidden="true" className="pointer-events-none absolute bottom-0 right-0 h-80 w-80 rounded-full bg-cyan-500/10 blur-[120px] animate-float-reverse"></div>
+          <div className="max-w-5xl mx-auto bg-brand-800 rounded-3xl border border-brand-700 p-8 md:p-16 shadow-2xl flex flex-col md:flex-row gap-12 relative z-10">
             
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Build a credibility asset your organisation actually owns</h2>
               <p className="text-brand-300 text-lg mb-8 leading-relaxed">
                 If thought leadership matters to your growth, it deserves more than a timeline. 
-                Let’s talk about how Insight Hub could work for your organisation.
+                Let's talk about how Insight Hub could work for your organisation.
               </p>
               <div className="space-y-4">
                  <div className="flex items-center gap-3 text-brand-300 text-sm">
-                   <div className="w-5 h-5 flex items-center justify-center bg-cyan-500/10 rounded-full border border-cyan-500/30 text-cyan-400">✓</div>
+                   <div className="w-5 h-5 flex items-center justify-center bg-cyan-500/10 rounded-full border border-cyan-500/30 text-cyan-400">+</div>
                    No obligation discovery call
                  </div>
                  <div className="flex items-center gap-3 text-brand-300 text-sm">
-                   <div className="w-5 h-5 flex items-center justify-center bg-cyan-500/10 rounded-full border border-cyan-500/30 text-cyan-400">✓</div>
+                   <div className="w-5 h-5 flex items-center justify-center bg-cyan-500/10 rounded-full border border-cyan-500/30 text-cyan-400">+</div>
                    Built for long-term credibility
                  </div>
               </div>
@@ -411,3 +454,4 @@ function App() {
 }
 
 export default App;
+

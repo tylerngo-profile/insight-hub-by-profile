@@ -8,34 +8,47 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
   return (
-    <section className="relative pt-32 pb-24 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-full mx-auto flex flex-col items-center text-center bg-brand-900 overflow-hidden">
-      
+    <section className="relative isolate pt-32 pb-24 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-full mx-auto flex flex-col items-center text-center bg-brand-900 overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-cyan-900/20 blur-[100px] rounded-full"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-brand-800/40 blur-[100px] rounded-full"></div>
+      <div className="absolute inset-0 pointer-events-none hero-glow"></div>
+      <div className="absolute inset-0 pointer-events-none bg-grid opacity-[0.08]"></div>
+      <div className="absolute -top-32 left-[-8%] w-[32rem] h-[32rem] bg-cyan-500/20 blur-[120px] rounded-full pointer-events-none animate-float-slow"></div>
+      <div className="absolute top-[10%] right-[-10%] w-[28rem] h-[28rem] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none animate-float-reverse"></div>
+      <div className="absolute bottom-[-22%] left-[30%] w-[34rem] h-[34rem] bg-brand-800/50 blur-[140px] rounded-full pointer-events-none animate-float-medium"></div>
+      <div className="absolute top-24 right-24 w-20 h-20 border border-cyan-400/30 rounded-2xl rotate-12 pointer-events-none animate-spin-slow"></div>
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-white/5 pointer-events-none"></div>
+
+      <div className="absolute left-6 top-32 hidden lg:flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 backdrop-blur-sm pointer-events-none animate-float-slow">
+        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-soft-pulse"></span>
+        Owned audience
+      </div>
+      <div className="absolute right-10 bottom-24 hidden lg:flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 border border-white/10 text-xs text-white/80 backdrop-blur-sm pointer-events-none animate-float-reverse">
+        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-soft-pulse"></span>
+        Compounding insight
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-8 leading-tight max-w-5xl">
-          Turn executive insight into a <span className="text-cyan-400">credibility engine</span> you own.
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight max-w-5xl animate-fade-up">
+          Turn executive insight into a <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-white/90">credibility engine</span> you own.
         </h1>
+        <div className="h-1 w-24 bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent rounded-full mb-8 animate-shimmer"></div>
         
-        <p className="text-lg md:text-xl text-brand-300 max-w-3xl mb-12 leading-relaxed font-light">
-          Insight Hub is a dedicated home for your leaders’ thinking. 
+        <p className="text-lg md:text-xl text-brand-300 max-w-3xl mb-12 leading-relaxed font-light animate-fade-up anim-delay-200">
+          Insight Hub is a dedicated home for your leaders' thinking. 
           A place where thought leadership compounds, audiences subscribe, and credibility builds over time, not disappears in a feed.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto animate-fade-up anim-delay-400">
           <Button onClick={onBookDemo} className="md:text-lg px-8 py-4">Book a demo</Button>
           <Button variant="outline" onClick={onSeeHow} className="md:text-lg px-8 py-4 border-brand-600 text-brand-200 hover:border-cyan-400 hover:text-white">See how Insight Hub works</Button>
         </div>
 
         {/* Abstract Visualization of "Owned Asset" */}
-        <div className="mt-20 w-full max-w-6xl relative">
+        <div className="mt-20 w-full max-w-6xl relative animate-fade-up anim-delay-600">
           <div className="absolute inset-0 bg-cyan-500/20 blur-[80px] rounded-full mix-blend-screen pointer-events-none opacity-40"></div>
           
-          <div className="relative bg-brand-950 border border-brand-800 rounded-xl shadow-2xl overflow-hidden aspect-[16/10] md:aspect-[21/9] flex flex-col group ring-1 ring-white/10">
+          <div className="relative bg-brand-950 border border-brand-800 rounded-xl shadow-2xl overflow-hidden aspect-[16/10] md:aspect-[21/9] flex flex-col group ring-1 ring-white/10 transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(0,182,237,0.15)]">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent animate-shimmer pointer-events-none"></div>
             {/* Fake Browser UI */}
             <div className="bg-brand-900 border-b border-brand-800 px-4 py-3 flex items-center gap-4">
                <div className="flex gap-2">
@@ -79,7 +92,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
                   </div>
                   
                   {/* Article Card 1 */}
-                  <div className="bg-brand-900/50 border border-brand-800 p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start hover:border-cyan-500/30 transition-colors duration-500">
+                  <div className="bg-brand-900/50 border border-brand-800 p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start hover:border-cyan-500/30 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-lg">
                      <div className="w-full md:w-48 aspect-video bg-brand-800 rounded-md flex-shrink-0 relative overflow-hidden">
                        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 to-transparent"></div>
                      </div>
@@ -106,3 +119,4 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
     </section>
   );
 };
+

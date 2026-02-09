@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
           <p className="text-sm text-brand-400 leading-relaxed">
             Profile helps leaders turn insight into influence, credibility, and commercial advantage.
           </p>
-          <p className="text-sm text-brand-600 mt-8">© {new Date().getFullYear()} Profile. All rights reserved.</p>
+          <p className="text-sm text-brand-600 mt-8">(c) {new Date().getFullYear()} Profile. All rights reserved.</p>
         </div>
         
         <div className="flex flex-col gap-4 text-sm text-brand-400 text-right">

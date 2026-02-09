@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
   className = '', 
   ...props 
 }) => {
-  const baseStyles = "px-6 py-3 rounded-md font-medium transition-all duration-200 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed";
+  const baseStyles = "px-6 py-3 rounded-full font-medium transition-all duration-200 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed";
   
   const variants = {
     primary: "bg-cyan-500 text-white hover:bg-cyan-400 shadow-[0_4px_14px_0_rgba(0,182,237,0.39)] hover:shadow-[0_6px_20px_rgba(0,182,237,0.23)] hover:-translate-y-0.5 border border-transparent",
