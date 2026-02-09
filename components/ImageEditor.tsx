@@ -52,7 +52,7 @@ export const ImageEditor: React.FC<ImageEditorProps> = ({ onClose }) => {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-brand-700 bg-brand-900">
           <div>
-            <h2 className="text-xl font-semibold text-white">Insight Hub Studio</h2>
+            <h2 className="text-xl font-semibold text-white">Vantage Studio</h2>
             <p className="text-brand-400 text-sm">Enhance your thought leadership visuals with AI.</p>
           </div>
           <button onClick={onClose} className="text-brand-400 hover:text-white transition-colors">
@@ -142,3 +142,4 @@ export const ImageEditor: React.FC<ImageEditorProps> = ({ onClose }) => {
     </div>
   );
 };
+

@@ -34,14 +34,14 @@ function App() {
   const insightSections = [
     {
       eyebrow: 'Platform',
-      title: 'Managed Insight Hub',
+      title: 'Managed Vantage Hub',
       description: 'A fully branded, SEO-optimised site set up and managed for you.',
       highlights: ['Custom hub & URL', 'SEO-ready structure', 'Ongoing management'],
       panelTitle: 'Launch-ready hub',
       panelLines: ['Brand tokens & typography', 'Insight templates', 'Subscriber capture'],
       panelCta: 'Go live in 3 weeks',
       image: '/illustrations/hub.svg',
-      imageAlt: 'Insight Hub platform preview',
+      imageAlt: 'Vantage platform preview',
       gradient: 'from-cyan-50 via-white to-brand-50'
     },
     {
@@ -121,20 +121,20 @@ function App() {
               <div className="flex items-center gap-3 rounded-2xl border border-brand-200 bg-white/90 px-4 py-2 shadow-sm">
                 <div className="h-10 w-10 rounded-xl bg-cyan-500 shadow-[0_10px_20px_rgba(0,182,237,0.35)]"></div>
                 <div className="text-left">
-                  <div className="text-lg font-bold text-brand-900 leading-none">Insight Hub</div>
-                  <div className="mt-1 flex items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-brand-400">
+                  <div className="text-lg font-bold text-brand-900 leading-none">Vantage</div>
+                  <div className="mt-1 flex items-center gap-2 text-[11px] tracking-[0.08em] text-brand-400">
                     <img
                       src="/profile/profile-logo.png"
                       alt="Profile logo"
                       className="h-3.5 w-3.5 object-contain"
                     />
-                    Powered by Profile
+                    by Profile
                   </div>
                 </div>
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <button onClick={() => scrollToSection('solution')} className="text-sm font-medium text-brand-600 hover:text-brand-900 transition-colors">Why Insight Hub</button>
+              <button onClick={() => scrollToSection('solution')} className="text-sm font-medium text-brand-600 hover:text-brand-900 transition-colors">Why Vantage</button>
               <button onClick={() => scrollToSection('how-it-works')} className="text-sm font-medium text-brand-600 hover:text-brand-900 transition-colors">How it works</button>
               <button onClick={() => scrollToSection('pricing')} className="text-sm font-medium text-brand-600 hover:text-brand-900 transition-colors">Pricing</button>
               <Button onClick={() => scrollToSection('contact')} variant="primary" className="!py-2 !px-5 !text-sm">Book a demo</Button>
@@ -234,15 +234,15 @@ function App() {
           </div>
         </section>
 
-        {/* 3. What is Insight Hub - White Background */}
+        {/* 3. What is Vantage - White Background */}
         <section id="solution" className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto text-center mb-20">
              <div className="inline-block px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-semibold mb-6 uppercase tracking-wide">
-                  Introducing Insight Hub
+                  Introducing Vantage
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-brand-900 mb-8">A dedicated home for your leaders' insight</h2>
             <p className="text-xl text-brand-600 leading-relaxed font-light">
-              Insight Hub is a branded destination where your organisation's thinking lives in one place. 
+              Vantage is a branded destination where your organisation's thinking lives in one place. 
               We help you capture sharp executive perspectives, publish them to a dedicated hub, and build a direct relationship with the people who matter most.
             </p>
           </div>
@@ -309,7 +309,7 @@ function App() {
           </div>
         </section>
 
-        {/* 4. How Insight Hub Works - Light Grey */}
+        {/* 4. How Vantage Works - Light Grey */}
         <section id="how-it-works" className="py-24 bg-brand-50 border-y border-brand-100 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -355,17 +355,17 @@ function App() {
           </div>
         </section>
 
-        {/* 5. Insight Hub vs LinkedIn - White */}
+        {/* 5. Vantage vs LinkedIn - White */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-6">LinkedIn distributes. Insight Hub compounds.</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-900 mb-6">LinkedIn distributes. Vantage compounds.</h2>
               <p className="text-lg text-brand-600 mb-8 leading-relaxed">
                 LinkedIn remains a powerful distribution channel. But on its own, it was never designed to help you build an owned credibility asset.
               </p>
               <div className="p-6 bg-brand-50 rounded-lg border-l-4 border-cyan-500">
                 <p className="text-brand-800 font-medium italic">
-                  "LinkedIn is the distribution layer. Insight Hub is the foundation."
+                  "LinkedIn is the distribution layer. Vantage is the foundation."
                 </p>
               </div>
             </div>
@@ -392,11 +392,11 @@ function App() {
                 </ul>
               </div>
 
-              {/* Insight Hub Column */}
+              {/* Vantage Column */}
               <div className="p-6 bg-white rounded-xl border border-cyan-200 shadow-xl shadow-cyan-900/5 relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:border-cyan-300">
                 <div className="absolute top-0 left-0 w-full h-1 bg-cyan-500"></div>
                 <div className="flex items-center gap-2 mb-6 text-brand-900 font-bold uppercase tracking-wider text-sm">
-                  <div className="w-2 h-2 rounded-full bg-cyan-500"></div> Insight Hub
+                  <div className="w-2 h-2 rounded-full bg-cyan-500"></div> Vantage
                 </div>
                 <ul className="space-y-4 text-sm text-brand-900 font-medium">
                   <li className="flex gap-3 items-center">
@@ -417,7 +417,7 @@ function App() {
           </div>
         </section>
 
-        {/* 6. Who Insight Hub is for - Dark Section for Contrast */}
+        {/* 6. Who Vantage is for - Dark Section for Contrast */}
         <section className="py-24 bg-brand-900 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
            <div aria-hidden="true" className="pointer-events-none absolute -top-24 right-12 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl animate-float-slow"></div>
            <div className="max-w-7xl mx-auto relative z-10">
@@ -425,7 +425,7 @@ function App() {
                <div className="md:w-1/2">
                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Built for organisations where credibility drives revenue</h2>
                  <p className="text-brand-300 text-lg leading-relaxed mb-8">
-                   Insight Hub is designed for senior leaders and organisations that compete on expertise, trust, and long-term reputation.
+                   Vantage is designed for senior leaders and organisations that compete on expertise, trust, and long-term reputation.
                  </p>
                  <div className="inline-block px-4 py-2 bg-brand-900/50 rounded-lg text-sm font-medium text-cyan-300 border border-brand-600">
                    This is not high-volume content marketing. It's thought leadership with purpose.
@@ -477,12 +477,12 @@ function App() {
           <div className="max-w-4xl mx-auto">
              <div className="text-center mb-16">
                <h2 className="text-3xl font-bold text-brand-900 mb-4">A complete thought leadership system</h2>
-               <p className="text-brand-600">Insight Hub combines strategy, content, technology, and distribution.</p>
+               <p className="text-brand-600">Vantage combines strategy, content, technology, and distribution.</p>
              </div>
              
              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-8">
                 {[
-                  "Fully managed Insight Hub",
+                  "Fully managed Vantage",
                   "Monthly executive insight creation",
                   "Audience subscription & capture",
                   "Strategic distribution support",
@@ -503,8 +503,8 @@ function App() {
           <div aria-hidden="true" className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,rgba(0,182,237,0.25),transparent_55%)]"></div>
           <div aria-hidden="true" className="absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-500/20 blur-[120px]"></div>
           <div className="max-w-6xl mx-auto relative z-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">They trust Insight Hub. That's what they say.</h2>
-            <p className="text-brand-300 max-w-2xl mx-auto">Proof from leaders who use Insight Hub to build credibility and demand.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">They trust Vantage. That's what they say.</h2>
+            <p className="text-brand-300 max-w-2xl mx-auto">Proof from leaders who use Vantage to build credibility and demand.</p>
           </div>
 
           <div className="max-w-4xl mx-auto mt-14 relative z-10">
@@ -513,7 +513,7 @@ function App() {
                 IH
               </div>
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                "Insight Hub turned our leaders' thinking into a compounding asset. We now see consistent engagement from target accounts and a clear signal in the pipeline."
+                "Vantage turned our leaders' thinking into a compounding asset. We now see consistent engagement from target accounts and a clear signal in the pipeline."
               </p>
               <div className="mt-6 text-sm text-brand-200">Morgan Hale, CEO at Northbridge Advisory</div>
               <div className="mt-6 flex items-center justify-center gap-2 text-white/50">
@@ -600,13 +600,13 @@ function App() {
                     loading="lazy"
                   />
                   <p className="text-lg text-brand-600 leading-relaxed mb-8">
-                    Insight Hub is a long-term thought leadership infrastructure, designed for founders and senior leaders who need credibility, visibility, and a fully owned audience around their expertise.
+                    Vantage is a long-term thought leadership infrastructure, designed for founders and senior leaders who need credibility, visibility, and a fully owned audience around their expertise.
                   </p>
 
                   <div className="mb-6 text-sm uppercase tracking-[0.3em] text-brand-400">The core package includes</div>
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
-                      "A dedicated Insight Hub website, built to convert high-intent B2B audiences",
+                      "A dedicated Vantage website, built to convert high-intent B2B audiences",
                       "Ongoing strategy, writing, and management of a monthly insight newsletter",
                       "One high-impact LinkedIn post per month, designed to drive traffic to the Hub",
                       "Paid LinkedIn promotion management for targeted distribution",
@@ -640,7 +640,7 @@ function App() {
                     {[
                       "Additional posting cadence and paid amplification",
                       "Video-first or multimedia-led thought leadership",
-                      "Multi-executive or multi-author Insight Hubs",
+                      "Multi-executive or multi-author Vantage hubs",
                       "Integration with broader PR and media programs"
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3">
@@ -665,7 +665,7 @@ function App() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Build a credibility asset your organisation actually owns</h2>
               <p className="text-brand-300 text-lg mb-8 leading-relaxed">
                 If thought leadership matters to your growth, it deserves more than a timeline. 
-                Let's talk about how Insight Hub could work for your organisation.
+                Let's talk about how Vantage could work for your organisation.
               </p>
               <div className="space-y-4">
                  <div className="flex items-center gap-3 text-brand-300 text-sm">
@@ -734,4 +734,5 @@ function App() {
 }
 
 export default App;
+
 

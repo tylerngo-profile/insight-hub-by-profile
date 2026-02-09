@@ -34,13 +34,13 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
         <div className="h-1 w-24 bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent rounded-full mb-8 animate-shimmer"></div>
         
         <p className="text-lg md:text-xl text-brand-300 max-w-3xl mb-12 leading-relaxed font-light animate-fade-up anim-delay-200">
-          Insight Hub is a dedicated home for your leaders' thinking. 
+          Vantage is a dedicated home for your leaders' thinking. 
           A place where thought leadership compounds, audiences subscribe, and credibility builds over time, not disappears in a feed.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto animate-fade-up anim-delay-400">
           <Button onClick={onBookDemo} className="md:text-lg px-8 py-4">Book a demo</Button>
-          <Button variant="outline" onClick={onSeeHow} className="md:text-lg px-8 py-4 border-brand-600 text-brand-200 hover:border-cyan-400 hover:text-white">See how Insight Hub works</Button>
+          <Button variant="outline" onClick={onSeeHow} className="md:text-lg px-8 py-4 border-brand-600 text-brand-200 hover:border-cyan-400 hover:text-white">See how Vantage works</Button>
         </div>
 
         {/* Abstract Visualization of "Owned Asset" */}
@@ -119,4 +119,5 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
     </section>
   );
 };
+
 
