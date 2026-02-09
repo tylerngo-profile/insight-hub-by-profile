@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insight Hub | Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Altone', 'Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              cyan: {
+                DEFAULT: '#00b6ed',
+                50: '#f0faff',
+                100: '#e0f5fe',
+                200: '#baebfd',
+                300: '#7ddbfb',
+                400: '#33c4f1',
+                500: '#00b6ed',
+                600: '#0091be',
+                700: '#007ca3',
+                800: '#006989',
+                900: '#065770',
+              },
+              brand: {
+                950: '#020617', // Slate 950
+                900: '#0f172a', // Slate 900
+                800: '#1e293b', // Slate 800
+                700: '#334155', // Slate 700
+                600: '#475569', // Slate 600
+                500: '#64748b', // Slate 500
+                400: '#94a3b8', // Slate 400
+                300: '#cbd5e1', // Slate 300
+                200: '#e2e8f0', // Slate 200
+                100: '#f1f5f9', // Slate 100
+                50: '#f8fafc',  // Slate 50
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Font face declaration for Altone (assumed imported/hosted) */
+      @font-face {
+        font-family: 'Altone';
+        src: local('Altone'), local('Altone-Regular');
+        font-weight: 400;
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'Altone';
+        src: local('Altone-Bold');
+        font-weight: 700;
+        font-display: swap;
+      }
+
+      /* Custom scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-brand-900 antialiased selection:bg-cyan-100 selection:text-brand-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
