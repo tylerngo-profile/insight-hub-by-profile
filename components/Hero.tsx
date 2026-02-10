@@ -102,12 +102,15 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
                 </div>
 
                 <div className="relative overflow-hidden rounded-lg border border-brand-800 bg-brand-900/40 p-2 h-[190px] md:h-[245px]">
-                  <img
-                    src="/demo/scott-lane-fullpage.png"
-                    alt="Client Insight Hub auto-scroll demo"
-                    className="demo-scroll-track w-full rounded-md"
-                    loading="lazy"
-                  />
+                  <div className="relative h-full w-full overflow-hidden rounded-md">
+                    <img src="/demo/sequence/frame-01.png" alt="Client Insight Hub demo frame 1" className="demo-sequence-frame" loading="lazy" />
+                    <img src="/demo/sequence/frame-02.png" alt="Client Insight Hub demo frame 2" className="demo-sequence-frame" loading="lazy" />
+                    <img src="/demo/sequence/frame-03.png" alt="Client Insight Hub demo frame 3" className="demo-sequence-frame" loading="lazy" />
+                    <img src="/demo/sequence/frame-04.png" alt="Client Insight Hub demo frame 4" className="demo-sequence-frame" loading="lazy" />
+                    <img src="/demo/sequence/frame-05.png" alt="Client Insight Hub demo frame 5" className="demo-sequence-frame" loading="lazy" />
+                    <img src="/demo/sequence/frame-06.png" alt="Client Insight Hub demo frame 6" className="demo-sequence-frame" loading="lazy" />
+                    <img src="/demo/sequence/frame-07.png" alt="Client Insight Hub demo frame 7" className="demo-sequence-frame" loading="lazy" />
+                  </div>
                   <div className="pointer-events-none absolute inset-0 rounded-md ring-1 ring-white/10"></div>
                 </div>
 

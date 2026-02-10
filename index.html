@@ -297,19 +297,33 @@
         animation-delay: 0.6s;
       }
 
-      @keyframes demoScrollY {
-        0%, 12% {
-          transform: translateY(0%);
+      @keyframes demoFrameFade {
+        0%, 10% {
+          opacity: 1;
         }
-        88%, 100% {
-          transform: translateY(-72%);
+        13%, 100% {
+          opacity: 0;
         }
       }
 
-      .demo-scroll-track {
-        animation: demoScrollY 18s ease-in-out infinite alternate;
-        will-change: transform;
+      .demo-sequence-frame {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        opacity: 0;
+        animation: demoFrameFade 21s linear infinite;
       }
+
+      .demo-sequence-frame:nth-child(1) { animation-delay: 0s; }
+      .demo-sequence-frame:nth-child(2) { animation-delay: 3s; }
+      .demo-sequence-frame:nth-child(3) { animation-delay: 6s; }
+      .demo-sequence-frame:nth-child(4) { animation-delay: 9s; }
+      .demo-sequence-frame:nth-child(5) { animation-delay: 12s; }
+      .demo-sequence-frame:nth-child(6) { animation-delay: 15s; }
+      .demo-sequence-frame:nth-child(7) { animation-delay: 18s; }
 
       @media (prefers-reduced-motion: reduce) {
         .animate-float-slow,
