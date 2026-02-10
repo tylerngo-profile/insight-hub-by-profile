@@ -106,6 +106,34 @@ function App() {
     }
   ];
 
+  const testimonials = [
+    {
+      initials: 'IH',
+      quote: "Vantage turned our leaders' thinking into a compounding asset. We now see consistent engagement from target accounts and a clear signal in the pipeline.",
+      author: 'Morgan Hale, CEO at Northbridge Advisory'
+    },
+    {
+      initials: 'CS',
+      quote: 'The biggest shift was audience ownership. Instead of losing momentum on social, we now have a reliable insight destination our sales team can use in live deals.',
+      author: 'Clara Shaw, Managing Partner at Stratmore Consulting'
+    },
+    {
+      initials: 'RB',
+      quote: 'Within one quarter, Vantage gave us clearer company-level engagement signals and a stronger executive narrative across key enterprise accounts.',
+      author: 'Ravi Bhatia, Commercial Director at Elmont Group'
+    }
+  ];
+
+  const [activeTestimonial, setActiveTestimonial] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 6500);
+
+    return () => window.clearInterval(timer);
+  }, [testimonials.length]);
+
   return (
     <div className="relative min-h-screen overflow-x-hidden font-sans text-brand-900 selection:bg-brand-900 selection:text-white">
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 bg-grid opacity-[0.16]"></div>
@@ -509,18 +537,25 @@ function App() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-14 relative z-10">
-            <div className="rounded-[32px] bg-white/10 border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.35)] p-10 md:p-12 text-center backdrop-blur-sm">
+            <div className="rounded-[32px] bg-white/10 border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.35)] p-10 md:p-12 text-center backdrop-blur-sm transition-all duration-500">
               <div className="mx-auto mb-6 h-16 w-16 rounded-full bg-gradient-to-br from-cyan-300 to-cyan-600 flex items-center justify-center text-brand-900 font-bold text-lg">
-                IH
+                {testimonials[activeTestimonial].initials}
               </div>
-              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                "Vantage turned our leaders' thinking into a compounding asset. We now see consistent engagement from target accounts and a clear signal in the pipeline."
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed min-h-[110px] md:min-h-[96px]">
+                "{testimonials[activeTestimonial].quote}"
               </p>
-              <div className="mt-6 text-sm text-brand-200">Morgan Hale, CEO at Northbridge Advisory</div>
-              <div className="mt-6 flex items-center justify-center gap-2 text-white/50">
-                <span className="h-2 w-2 rounded-full bg-white/60"></span>
-                <span className="h-2 w-2 rounded-full bg-white/30"></span>
-                <span className="h-2 w-2 rounded-full bg-white/30"></span>
+              <div className="mt-6 text-sm text-brand-200">{testimonials[activeTestimonial].author}</div>
+
+              <div className="mt-8 flex items-center justify-center gap-3 text-white/50">
+                {testimonials.map((item, idx) => (
+                  <button
+                    key={item.initials}
+                    type="button"
+                    aria-label={`View testimonial ${idx + 1}`}
+                    onClick={() => setActiveTestimonial(idx)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${activeTestimonial === idx ? 'w-8 bg-white/80' : 'w-2.5 bg-white/35 hover:bg-white/55'}`}
+                  ></button>
+                ))}
               </div>
             </div>
           </div>
