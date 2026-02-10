@@ -74,50 +74,16 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
                <div className="h-6 bg-brand-800/50 rounded-md w-64 mx-auto hidden md:block"></div>
             </div>
             
-            {/* Hybrid Demo Content: mock UI shell + real client embed */}
-            <div className="flex-1 p-4 md:p-6 grid grid-cols-12 gap-4 md:gap-6 bg-brand-950/85">
-              {/* Left mock rail (keeps premium product feel) */}
-              <div className="hidden md:flex md:col-span-3 flex-col rounded-lg border border-brand-800/70 bg-brand-900/35 p-4">
-                <div className="h-3 w-16 bg-brand-700 rounded mb-5"></div>
-                <div className="space-y-2 mb-6">
-                  <div className="h-2.5 w-full bg-brand-800 rounded"></div>
-                  <div className="h-2.5 w-4/5 bg-brand-800 rounded"></div>
-                  <div className="h-2.5 w-3/4 bg-brand-800 rounded"></div>
-                </div>
-                <div className="mt-auto rounded-lg border border-brand-700/60 bg-brand-900/70 p-3">
-                  <div className="h-1.5 w-10 bg-cyan-500/70 rounded mb-2"></div>
-                  <div className="text-lg font-semibold text-white leading-none">9.0k</div>
-                  <div className="mt-1 text-[11px] text-brand-400">Followers captured</div>
-                </div>
-              </div>
-
-              {/* Main content area with real client screenshot embed */}
-              <div className="col-span-12 md:col-span-9 flex flex-col gap-4">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <div className="h-2.5 w-28 bg-cyan-500/80 rounded mb-2"></div>
-                    <div className="h-4 w-40 md:w-56 bg-brand-700 rounded"></div>
-                  </div>
-                  <div className="h-8 w-8 rounded-full border border-brand-700 bg-brand-800/80"></div>
-                </div>
-
-                <div className="relative overflow-hidden rounded-lg border border-brand-800 bg-brand-900/40 p-2 h-[190px] md:h-[245px]">
-                  <div className="relative h-full w-full overflow-hidden rounded-md">
-                    <img src="/demo/sequence/frame-01.png" alt="Client Insight Hub demo frame 1" className="demo-sequence-frame" loading="lazy" />
-                    <img src="/demo/sequence/frame-02.png" alt="Client Insight Hub demo frame 2" className="demo-sequence-frame" loading="lazy" />
-                    <img src="/demo/sequence/frame-03.png" alt="Client Insight Hub demo frame 3" className="demo-sequence-frame" loading="lazy" />
-                    <img src="/demo/sequence/frame-04.png" alt="Client Insight Hub demo frame 4" className="demo-sequence-frame" loading="lazy" />
-                    <img src="/demo/sequence/frame-05.png" alt="Client Insight Hub demo frame 5" className="demo-sequence-frame" loading="lazy" />
-                    <img src="/demo/sequence/frame-06.png" alt="Client Insight Hub demo frame 6" className="demo-sequence-frame" loading="lazy" />
-                    <img src="/demo/sequence/frame-07.png" alt="Client Insight Hub demo frame 7" className="demo-sequence-frame" loading="lazy" />
-                  </div>
-                  <div className="pointer-events-none absolute inset-0 rounded-md ring-1 ring-white/10"></div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 opacity-70">
-                  <div className="h-14 rounded-lg border border-brand-800 bg-brand-900/35"></div>
-                  <div className="h-14 rounded-lg border border-brand-800 bg-brand-900/35"></div>
-                </div>
+            {/* Full browser demo area */}
+            <div className="relative flex-1 bg-brand-950/85 p-2 md:p-3">
+              <div className="relative h-full w-full overflow-hidden rounded-lg border border-brand-800/80 bg-brand-900/30">
+                <img src="/demo/sequence/frame-01.png" alt="Client Insight Hub demo frame 1" className="demo-sequence-frame" loading="lazy" />
+                <img src="/demo/sequence/frame-02.png" alt="Client Insight Hub demo frame 2" className="demo-sequence-frame" loading="lazy" />
+                <img src="/demo/sequence/frame-03.png" alt="Client Insight Hub demo frame 3" className="demo-sequence-frame" loading="lazy" />
+                <img src="/demo/sequence/frame-04.png" alt="Client Insight Hub demo frame 4" className="demo-sequence-frame" loading="lazy" />
+                <img src="/demo/sequence/frame-05.png" alt="Client Insight Hub demo frame 5" className="demo-sequence-frame" loading="lazy" />
+                <img src="/demo/sequence/frame-06.png" alt="Client Insight Hub demo frame 6" className="demo-sequence-frame" loading="lazy" />
+                <img src="/demo/sequence/frame-07.png" alt="Client Insight Hub demo frame 7" className="demo-sequence-frame" loading="lazy" />
               </div>
             </div>
           </div>
