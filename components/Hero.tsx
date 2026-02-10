@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
         <div className="mt-20 w-full max-w-6xl relative animate-fade-up anim-delay-600">
           <div className="absolute inset-0 bg-cyan-500/20 blur-[80px] rounded-full mix-blend-screen pointer-events-none opacity-40"></div>
           
-          <div className="relative bg-brand-950 border border-brand-800 rounded-xl shadow-2xl overflow-hidden aspect-[16/10] md:aspect-[21/9] flex flex-col group ring-1 ring-white/10 transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(0,182,237,0.15)]">
+          <div className="relative bg-brand-950 border border-brand-800 rounded-xl shadow-2xl overflow-hidden aspect-[16/10] md:aspect-[16/9] flex flex-col group ring-1 ring-white/10 transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(0,182,237,0.15)]">
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent animate-shimmer pointer-events-none"></div>
             {/* Fake Browser UI */}
             <div className="bg-brand-900 border-b border-brand-800 px-4 py-3 flex items-center gap-4">
@@ -79,10 +79,9 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
               <img
                 src="/demo/scott-lane-insight-preview.jpg"
                 alt="Client Insight Hub demo preview"
-                className="h-full w-full rounded-lg border border-brand-800 object-cover object-top"
+                className="h-full w-full rounded-lg border border-brand-800 object-contain bg-brand-950"
                 loading="lazy"
               />
-              <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-t from-brand-950/35 via-transparent to-transparent"></div>
             </div>
           </div>
         </div>
