@@ -74,59 +74,15 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
                <div className="h-6 bg-brand-800/50 rounded-md w-64 mx-auto hidden md:block"></div>
             </div>
             
-            {/* Dashboard Content */}
-            <div className="flex-1 p-6 md:p-10 grid grid-cols-12 gap-6 bg-brand-950/80">
-               {/* Left Col - Sidebar */}
-               <div className="hidden md:block col-span-3 space-y-4 border-r border-brand-800/50 pr-6">
-                  <div className="h-4 w-24 bg-brand-700 rounded mb-8"></div>
-                  <div className="space-y-3">
-                    <div className="h-3 w-full bg-brand-800/50 rounded"></div>
-                    <div className="h-3 w-3/4 bg-brand-800/50 rounded"></div>
-                    <div className="h-3 w-5/6 bg-brand-800/50 rounded"></div>
-                  </div>
-                  <div className="mt-auto pt-12">
-                     <div className="h-32 rounded-lg bg-gradient-to-br from-brand-900 to-brand-800 border border-brand-700/50 p-4 relative overflow-hidden">
-                        <div className="relative z-10">
-                          <div className="h-2 w-12 bg-cyan-500/50 rounded mb-2"></div>
-                          <div className="text-2xl font-bold text-white">4.2k</div>
-                          <div className="text-xs text-brand-400">Subscribers owned</div>
-                        </div>
-                        <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl"></div>
-                     </div>
-                  </div>
-               </div>
-               
-               {/* Main Content - Article Feed */}
-               <div className="col-span-12 md:col-span-9 flex flex-col gap-6">
-                  <div className="flex justify-between items-end mb-4">
-                    <div>
-                      <div className="h-3 w-32 bg-cyan-600 rounded mb-2"></div>
-                      <div className="h-8 w-64 md:w-96 bg-brand-800 rounded"></div>
-                    </div>
-                    <div className="h-10 w-10 bg-brand-800 rounded-full border border-brand-700"></div>
-                  </div>
-                  
-                  {/* Article Card 1 */}
-                  <div className="bg-brand-900/50 border border-brand-800 p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start hover:border-cyan-500/30 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-lg">
-                     <div className="w-full md:w-48 aspect-video bg-brand-800 rounded-md flex-shrink-0 relative overflow-hidden">
-                       <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/20 to-transparent"></div>
-                     </div>
-                     <div className="flex-1 space-y-3">
-                        <div className="h-5 w-3/4 bg-brand-700 rounded"></div>
-                        <div className="h-3 w-full bg-brand-800 rounded"></div>
-                        <div className="h-3 w-5/6 bg-brand-800 rounded"></div>
-                     </div>
-                  </div>
-
-                   {/* Article Card 2 */}
-                  <div className="bg-brand-900/50 border border-brand-800 p-6 rounded-lg flex flex-col md:flex-row gap-6 items-start opacity-60">
-                     <div className="w-full md:w-48 aspect-video bg-brand-800 rounded-md flex-shrink-0"></div>
-                     <div className="flex-1 space-y-3">
-                        <div className="h-5 w-2/3 bg-brand-700 rounded"></div>
-                        <div className="h-3 w-full bg-brand-800 rounded"></div>
-                     </div>
-                  </div>
-               </div>
+            {/* Demo Content */}
+            <div className="relative flex-1 bg-brand-950/80 p-3 md:p-4">
+              <img
+                src="/demo/scott-lane-insight-preview.jpg"
+                alt="Client Insight Hub demo preview"
+                className="h-full w-full rounded-lg border border-brand-800 object-cover object-top"
+                loading="lazy"
+              />
+              <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-t from-brand-950/35 via-transparent to-transparent"></div>
             </div>
           </div>
         </div>
