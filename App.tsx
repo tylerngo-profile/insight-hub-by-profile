@@ -40,7 +40,7 @@ function App() {
       panelTitle: 'Launch-ready hub',
       panelLines: ['Brand tokens & typography', 'Insight templates', 'Subscriber capture'],
       panelCta: 'Go live in 3 weeks',
-      image: '/illustrations/hub.svg',
+      image: '/demo/SL-photos-1-1-1024x768.jpg',
       imageAlt: 'Vantage platform preview',
       gradient: 'from-cyan-50 via-white to-brand-50'
     },
@@ -52,7 +52,7 @@ function App() {
       panelTitle: 'Interview to publish',
       panelLines: ['45-min capture call', 'Draft in 5 days', 'Ready for release'],
       panelCta: 'Zero writing burden',
-      image: '/illustrations/interview.svg',
+      image: '/demo/SL-headshot.jpg',
       imageAlt: 'Executive interview workflow',
       gradient: 'from-brand-50 via-white to-cyan-50'
     },
@@ -64,7 +64,7 @@ function App() {
       panelTitle: 'Subscriber capture',
       panelLines: ['Smart forms', 'Lead magnets', 'Consent-first tracking'],
       panelCta: 'Own the relationship',
-      image: '/illustrations/audience.svg',
+      image: '/demo/VIDEO-1.png',
       imageAlt: 'Audience growth and subscriber capture',
       gradient: 'from-cyan-50 via-white to-cyan-100'
     },
@@ -76,7 +76,7 @@ function App() {
       panelTitle: 'Distribution plan',
       panelLines: ['LinkedIn snippets', 'Email sequences', 'Video cutdowns'],
       panelCta: 'Reach the right buyers',
-      image: '/illustrations/distribution.svg',
+      image: '/demo/coverage-city_am.png',
       imageAlt: 'Multi-channel distribution network',
       gradient: 'from-brand-50 via-white to-cyan-50'
     },
@@ -88,7 +88,7 @@ function App() {
       panelTitle: 'Insight analytics',
       panelLines: ['Company visits', 'Top content', 'Intent signals'],
       panelCta: 'Prove credibility',
-      image: '/illustrations/analytics.svg',
+      image: '/demo/board_agenda.png',
       imageAlt: 'Content performance analytics',
       gradient: 'from-cyan-50 via-white to-brand-50'
     },
@@ -100,7 +100,7 @@ function App() {
       panelTitle: 'Compounding value',
       panelLines: ['Searchable library', 'Thought leadership archive', 'Credibility flywheel'],
       panelCta: 'Build over time',
-      image: '/illustrations/compounding.svg',
+      image: '/demo/SL-photos-5-1.jpg',
       imageAlt: 'Compounding credibility over time',
       gradient: 'from-brand-50 via-white to-cyan-50'
     }
@@ -208,9 +208,9 @@ function App() {
               <div className="space-y-4">
                 <div className="p-6 rounded-2xl bg-white border border-brand-200 shadow-sm">
                   <img
-                    src="/illustrations/rented-platforms.svg"
+                    src="/demo/coverage-raconteur.png"
                     alt="Rented platforms fragment the audience"
-                    className="w-full h-40 object-contain"
+                    className="w-full h-40 object-cover rounded-xl border border-brand-100 bg-white"
                     loading="lazy"
                   />
                   <p className="mt-4 text-sm text-brand-500">
@@ -286,7 +286,7 @@ function App() {
                       <img
                         src={item.image}
                         alt={item.imageAlt}
-                        className="w-full h-36 md:h-40 object-contain rounded-xl bg-white border border-brand-100 p-4 mb-6"
+                        className="w-full h-36 md:h-40 object-cover rounded-xl bg-white border border-brand-100 mb-6"
                         loading="lazy"
                       />
                       <div className="text-sm font-semibold text-brand-700">{item.panelTitle}</div>
@@ -595,9 +595,9 @@ function App() {
               <div className="lg:col-span-2">
                 <div className="rounded-3xl border border-brand-200 bg-white shadow-[0_30px_70px_rgba(15,23,42,0.08)] p-8 md:p-12">
                   <img
-                    src="/illustrations/pricing.svg"
+                    src="/demo/SL-photos-2-1.jpg"
                     alt="Pricing overview"
-                    className="w-full h-40 object-contain rounded-2xl bg-brand-50 border border-brand-100 p-4 mb-8"
+                    className="w-full h-40 object-cover rounded-2xl bg-brand-50 border border-brand-100 mb-8"
                     loading="lazy"
                   />
                   <p className="text-lg text-brand-600 leading-relaxed mb-8">
