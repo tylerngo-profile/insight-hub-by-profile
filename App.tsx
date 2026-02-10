@@ -40,7 +40,7 @@ function App() {
       panelTitle: 'Launch-ready hub',
       panelLines: ['Brand tokens & typography', 'Insight templates', 'Subscriber capture'],
       panelCta: 'Go live in 3 weeks',
-      image: '/demo/launch-ready-hub-demo.png',
+      image: '/demo/SL-photos-1-1-1024x768.jpg',
       imageAlt: 'Vantage platform preview',
       gradient: 'from-cyan-50 via-white to-brand-50'
     },
@@ -88,7 +88,7 @@ function App() {
       panelTitle: 'Insight analytics',
       panelLines: ['Company visits', 'Top content', 'Intent signals'],
       panelCta: 'Prove credibility',
-      image: '/demo/vantage-dashboard-demo.png',
+      image: '/demo/board_agenda.png',
       imageAlt: 'Content performance analytics',
       gradient: 'from-cyan-50 via-white to-brand-50'
     },
@@ -286,7 +286,7 @@ function App() {
                       <img
                         src={item.image}
                         alt={item.imageAlt}
-                        className="w-full h-36 md:h-40 object-contain rounded-xl bg-white border border-brand-100 p-2 mb-6"
+                        className="w-full h-36 md:h-40 object-cover rounded-xl bg-white border border-brand-100 mb-6"
                         loading="lazy"
                       />
                       <div className="text-sm font-semibold text-brand-700">{item.panelTitle}</div>
@@ -595,9 +595,9 @@ function App() {
               <div className="lg:col-span-2">
                 <div className="rounded-3xl border border-brand-200 bg-white shadow-[0_30px_70px_rgba(15,23,42,0.08)] p-8 md:p-12">
                   <img
-                    src="/demo/pricing-package-demo.png"
+                    src="/demo/SL-photos-2-1.jpg"
                     alt="Pricing overview"
-                    className="w-full h-40 object-contain rounded-2xl bg-brand-50 border border-brand-100 p-2 mb-8"
+                    className="w-full h-40 object-cover rounded-2xl bg-brand-50 border border-brand-100 mb-8"
                     loading="lazy"
                   />
                   <p className="text-lg text-brand-600 leading-relaxed mb-8">
