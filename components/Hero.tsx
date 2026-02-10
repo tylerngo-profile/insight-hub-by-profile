@@ -62,29 +62,17 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
         <div className="mt-20 w-full max-w-6xl relative animate-fade-up anim-delay-600">
           <div className="absolute inset-0 bg-cyan-500/20 blur-[80px] rounded-full mix-blend-screen pointer-events-none opacity-40"></div>
           
-          <div className="relative bg-brand-950 border border-brand-800 rounded-xl shadow-2xl overflow-hidden aspect-[16/10] md:aspect-[16/9] flex flex-col group ring-1 ring-white/10 transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(0,182,237,0.15)]">
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent animate-shimmer pointer-events-none"></div>
-            {/* Fake Browser UI */}
-            <div className="bg-brand-900 border-b border-brand-800 px-4 py-3 flex items-center gap-4">
-               <div className="flex gap-2">
-                 <div className="w-3 h-3 rounded-full bg-brand-700"></div>
-                 <div className="w-3 h-3 rounded-full bg-brand-700"></div>
-                 <div className="w-3 h-3 rounded-full bg-brand-700"></div>
-               </div>
-               <div className="h-6 bg-brand-800/50 rounded-md w-64 mx-auto hidden md:block"></div>
-            </div>
-            
-            {/* Full browser demo area */}
-            <div className="relative flex-1 bg-brand-950/85 p-2 md:p-3">
-              <div className="relative h-full w-full overflow-hidden rounded-lg border border-brand-800/80 bg-brand-900/30">
-                <img src="/demo/sequence/frame-01.png" alt="Client Insight Hub demo frame 1" className="demo-sequence-frame" loading="lazy" />
-                <img src="/demo/sequence/frame-02.png" alt="Client Insight Hub demo frame 2" className="demo-sequence-frame" loading="lazy" />
-                <img src="/demo/sequence/frame-03.png" alt="Client Insight Hub demo frame 3" className="demo-sequence-frame" loading="lazy" />
-                <img src="/demo/sequence/frame-04.png" alt="Client Insight Hub demo frame 4" className="demo-sequence-frame" loading="lazy" />
-                <img src="/demo/sequence/frame-05.png" alt="Client Insight Hub demo frame 5" className="demo-sequence-frame" loading="lazy" />
-                <img src="/demo/sequence/frame-06.png" alt="Client Insight Hub demo frame 6" className="demo-sequence-frame" loading="lazy" />
-                <img src="/demo/sequence/frame-07.png" alt="Client Insight Hub demo frame 7" className="demo-sequence-frame" loading="lazy" />
-              </div>
+          <div className="relative rounded-xl shadow-2xl overflow-hidden aspect-[16/10] md:aspect-[16/9] border border-brand-800/70 bg-brand-950/60 transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(0,182,237,0.15)]">
+            <div className="relative h-full w-full overflow-hidden">
+              <img src="/demo/sequence/frame-01.png" alt="Client Insight Hub demo frame 1" className="demo-sequence-frame" loading="lazy" />
+              <img src="/demo/sequence/frame-01.png" alt="Client Insight Hub demo frame 1 hold" className="demo-sequence-frame" loading="lazy" />
+              <img src="/demo/sequence/frame-02.png" alt="Client Insight Hub demo frame 2" className="demo-sequence-frame" loading="lazy" />
+              <img src="/demo/sequence/frame-03.png" alt="Client Insight Hub demo frame 3" className="demo-sequence-frame" loading="lazy" />
+              <img src="/demo/sequence/frame-04.png" alt="Client Insight Hub demo frame 4" className="demo-sequence-frame" loading="lazy" />
+              <img src="/demo/sequence/frame-05.png" alt="Client Insight Hub demo frame 5" className="demo-sequence-frame" loading="lazy" />
+              <img src="/demo/sequence/frame-06.png" alt="Client Insight Hub demo frame 6" className="demo-sequence-frame" loading="lazy" />
+              <img src="/demo/sequence/frame-07.png" alt="Client Insight Hub demo frame 7" className="demo-sequence-frame" loading="lazy" />
+              <img src="/demo/sequence/frame-07.png" alt="Client Insight Hub demo frame 7 hold" className="demo-sequence-frame" loading="lazy" />
             </div>
           </div>
         </div>
