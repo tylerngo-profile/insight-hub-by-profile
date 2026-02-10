@@ -63,16 +63,16 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
           <div className="absolute inset-0 bg-cyan-500/20 blur-[80px] rounded-full mix-blend-screen pointer-events-none opacity-40"></div>
           
           <div className="relative rounded-xl shadow-2xl overflow-hidden aspect-[16/10] md:aspect-[16/9] border border-brand-800/70 bg-brand-950/60 transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(0,182,237,0.15)]">
-            <div className="relative h-full w-full overflow-hidden">
-              <img src="/demo/sequence/frame-01.png" alt="Client Insight Hub demo frame 1" className="demo-sequence-frame" loading="lazy" />
-              <img src="/demo/sequence/frame-01.png" alt="Client Insight Hub demo frame 1 hold" className="demo-sequence-frame" loading="lazy" />
-              <img src="/demo/sequence/frame-02.png" alt="Client Insight Hub demo frame 2" className="demo-sequence-frame" loading="lazy" />
-              <img src="/demo/sequence/frame-03.png" alt="Client Insight Hub demo frame 3" className="demo-sequence-frame" loading="lazy" />
-              <img src="/demo/sequence/frame-04.png" alt="Client Insight Hub demo frame 4" className="demo-sequence-frame" loading="lazy" />
-              <img src="/demo/sequence/frame-05.png" alt="Client Insight Hub demo frame 5" className="demo-sequence-frame" loading="lazy" />
-              <img src="/demo/sequence/frame-06.png" alt="Client Insight Hub demo frame 6" className="demo-sequence-frame" loading="lazy" />
-              <img src="/demo/sequence/frame-07.png" alt="Client Insight Hub demo frame 7" className="demo-sequence-frame" loading="lazy" />
-              <img src="/demo/sequence/frame-07.png" alt="Client Insight Hub demo frame 7 hold" className="demo-sequence-frame" loading="lazy" />
+            <div className="relative h-full w-full overflow-hidden bg-brand-950">
+              <video
+                className="h-full w-full object-cover"
+                src="/demo/scott-lane-demo.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+              />
             </div>
           </div>
         </div>
