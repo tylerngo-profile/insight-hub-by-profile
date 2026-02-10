@@ -297,6 +297,20 @@
         animation-delay: 0.6s;
       }
 
+      @keyframes demoScrollY {
+        0%, 12% {
+          transform: translateY(0%);
+        }
+        88%, 100% {
+          transform: translateY(-72%);
+        }
+      }
+
+      .demo-scroll-track {
+        animation: demoScrollY 18s ease-in-out infinite alternate;
+        will-change: transform;
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .animate-float-slow,
         .animate-float-medium,

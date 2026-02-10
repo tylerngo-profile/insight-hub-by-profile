@@ -101,11 +101,11 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
                   <div className="h-8 w-8 rounded-full border border-brand-700 bg-brand-800/80"></div>
                 </div>
 
-                <div className="relative overflow-hidden rounded-lg border border-brand-800 bg-brand-900/40 p-2">
+                <div className="relative overflow-hidden rounded-lg border border-brand-800 bg-brand-900/40 p-2 h-[190px] md:h-[245px]">
                   <img
-                    src="/demo/scott-lane-insight-preview.jpg"
-                    alt="Client Insight Hub demo preview"
-                    className="h-[190px] md:h-[245px] w-full rounded-md object-cover object-top"
+                    src="/demo/scott-lane-fullpage.png"
+                    alt="Client Insight Hub auto-scroll demo"
+                    className="demo-scroll-track w-full rounded-md"
                     loading="lazy"
                   />
                   <div className="pointer-events-none absolute inset-0 rounded-md ring-1 ring-white/10"></div>
