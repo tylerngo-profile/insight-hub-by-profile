@@ -454,19 +454,20 @@ function App() {
         {/* 7. Early Proof - White */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-brand-900 mb-10">Already helping leaders own their thinking</h2>
+            <h2 className="text-2xl font-bold text-brand-900 mb-4">Early commercial signals from Vantage engagements</h2>
+            <p className="text-brand-600 mb-10">Illustrative outcomes based on active B2B thought leadership programmes.</p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="p-8 rounded-2xl bg-brand-50 border border-brand-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="text-4xl font-bold text-cyan-600 mb-2">Grow</div>
-                <p className="text-brand-600 text-sm font-medium">Subscriber bases around senior leaders</p>
+                <div className="text-4xl font-bold text-cyan-600 mb-2">+30%</div>
+                <p className="text-brand-600 text-sm font-medium">Returning visitors to owned insight content within first 8–12 weeks</p>
               </div>
               <div className="p-8 rounded-2xl bg-brand-50 border border-brand-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="text-4xl font-bold text-cyan-600 mb-2">Engage</div>
-                <p className="text-brand-600 text-sm font-medium">Higher-quality engagement than social-only</p>
+                <div className="text-4xl font-bold text-cyan-600 mb-2">2–4x</div>
+                <p className="text-brand-600 text-sm font-medium">Higher depth of engagement vs social-only posting patterns</p>
               </div>
               <div className="p-8 rounded-2xl bg-brand-50 border border-brand-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="text-4xl font-bold text-cyan-600 mb-2">Close</div>
-                <p className="text-brand-600 text-sm font-medium">Sales teams using insights directly in deals</p>
+                <div className="text-4xl font-bold text-cyan-600 mb-2">Pipeline</div>
+                <p className="text-brand-600 text-sm font-medium">Clearer linkage between executive content and target-account conversations</p>
               </div>
             </div>
           </div>
@@ -503,8 +504,8 @@ function App() {
           <div aria-hidden="true" className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,rgba(0,182,237,0.25),transparent_55%)]"></div>
           <div aria-hidden="true" className="absolute -top-32 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-500/20 blur-[120px]"></div>
           <div className="max-w-6xl mx-auto relative z-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">They trust Vantage. That's what they say.</h2>
-            <p className="text-brand-300 max-w-2xl mx-auto">Proof from leaders who use Vantage to build credibility and demand.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Trusted by leadership teams in complex B2B sectors.</h2>
+            <p className="text-brand-300 max-w-2xl mx-auto">Proof from organisations using Vantage to turn insight into measurable commercial signals.</p>
           </div>
 
           <div className="max-w-4xl mx-auto mt-14 relative z-10">
@@ -622,6 +623,10 @@ function App() {
                   <div className="mt-8 rounded-2xl border border-cyan-100 bg-cyan-50/70 p-5 text-sm text-brand-600">
                     A paid media budget is recommended separately and scaled based on objectives.
                   </div>
+
+                  <div className="mt-4 rounded-2xl border border-brand-200 bg-white p-5 text-sm text-brand-700">
+                    No long-term contract required for pilot phase.
+                  </div>
                 </div>
               </div>
 
@@ -642,6 +647,22 @@ function App() {
                       "Video-first or multimedia-led thought leadership",
                       "Multi-executive or multi-author Vantage hubs",
                       "Integration with broader PR and media programs"
+                    ].map((item) => (
+                      <div key={item} className="flex items-start gap-3">
+                        <div className="mt-1 h-2 w-2 rounded-full bg-cyan-500"></div>
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="rounded-3xl border border-brand-200 bg-white p-6 shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
+                  <div className="text-xs uppercase tracking-[0.3em] text-brand-400 mb-4">Ideal for</div>
+                  <div className="space-y-3 text-sm text-brand-700">
+                    {[
+                      "Founder-led and partner-led B2B firms",
+                      "Teams selling complex, high-value services",
+                      "Organisations where trust influences deal velocity"
                     ].map((item) => (
                       <div key={item} className="flex items-start gap-3">
                         <div className="mt-1 h-2 w-2 rounded-full bg-cyan-500"></div>

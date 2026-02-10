@@ -5,9 +5,9 @@ export const Footer: React.FC = () => {
     <footer className="bg-gradient-to-br from-brand-950 via-brand-900 to-cyan-900 text-white pt-20 pb-10 px-4 sm:px-6 lg:px-8 border-t border-white/10">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.2fr_0.8fr_0.6fr] gap-12 items-start">
         <div>
-          <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Join our newsletter.</h3>
+          <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Get monthly executive insights.</h3>
           <p className="text-brand-300 mb-6 max-w-md">
-            Curated executive insights, platform updates, and thought leadership strategies.
+            Curated B2B thought leadership strategies, platform updates, and practical frameworks.
           </p>
           <form className="flex flex-col sm:flex-row gap-3 w-full max-w-xl" onSubmit={(e) => e.preventDefault()}>
             <input
@@ -30,8 +30,8 @@ export const Footer: React.FC = () => {
           </div>
           <div className="space-y-3">
             <div className="text-xs uppercase tracking-[0.3em] text-white/60">Connect</div>
-            <a href="#" className="block text-white/80 hover:text-white">LinkedIn</a>
-            <a href="#" className="block text-white/80 hover:text-white">X (Twitter)</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="block text-white/80 hover:text-white">LinkedIn</a>
+            <a href="#contact" className="block text-white/80 hover:text-white">Book a demo</a>
           </div>
         </div>
 

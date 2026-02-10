@@ -33,14 +33,29 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
         </h1>
         <div className="h-1 w-24 bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent rounded-full mb-8 animate-shimmer"></div>
         
-        <p className="text-lg md:text-xl text-brand-300 max-w-3xl mb-12 leading-relaxed font-light animate-fade-up anim-delay-200">
-          Vantage is a dedicated home for your leaders' thinking. 
+        <p className="text-lg md:text-xl text-brand-300 max-w-3xl mb-6 leading-relaxed font-light animate-fade-up anim-delay-200">
+          Vantage is a dedicated home for your leaders' thinking.
           A place where thought leadership compounds, audiences subscribe, and credibility builds over time, not disappears in a feed.
         </p>
-        
+
+        <p className="text-sm md:text-base text-cyan-200/90 mb-12 animate-fade-up anim-delay-200">
+          Built for leadership teams that need measurable authority with senior B2B buyers.
+        </p>
+
         <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto animate-fade-up anim-delay-400">
           <Button onClick={onBookDemo} className="md:text-lg px-8 py-4">Book a demo</Button>
-          <Button variant="outline" onClick={onSeeHow} className="md:text-lg px-8 py-4 border-brand-600 text-brand-200 hover:border-cyan-400 hover:text-white">See how Vantage works</Button>
+          <Button variant="outline" onClick={onSeeHow} className="md:text-lg px-8 py-4 border-brand-600 text-brand-200 hover:border-cyan-400 hover:text-white">View sample hub</Button>
+        </div>
+
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3 animate-fade-up anim-delay-400">
+          {['Owned audience', 'Company-level analytics', 'Launch in 3 weeks'].map((chip) => (
+            <span
+              key={chip}
+              className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs md:text-sm text-white/85 backdrop-blur-sm"
+            >
+              {chip}
+            </span>
+          ))}
         </div>
 
         {/* Abstract Visualization of "Owned Asset" */}
