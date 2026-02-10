@@ -62,17 +62,62 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
         <div className="mt-20 w-full max-w-6xl relative animate-fade-up anim-delay-600">
           <div className="absolute inset-0 bg-cyan-500/20 blur-[80px] rounded-full mix-blend-screen pointer-events-none opacity-40"></div>
           
-          <div className="relative rounded-xl shadow-2xl overflow-hidden aspect-[16/10] md:aspect-[16/9] border border-brand-800/70 bg-brand-950/60 transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(0,182,237,0.15)]">
-            <div className="relative h-full w-full overflow-hidden bg-brand-950">
-              <video
-                className="h-full w-full object-cover"
-                src="/demo/scott-lane-demo.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-              />
+          <div className="relative bg-brand-950 border border-brand-800 rounded-xl shadow-2xl overflow-hidden aspect-[16/10] md:aspect-[21/9] flex flex-col group ring-1 ring-white/10 transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(0,182,237,0.15)]">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent animate-shimmer pointer-events-none"></div>
+            {/* Fake Browser UI */}
+            <div className="bg-brand-900 border-b border-brand-800 px-4 py-3 flex items-center gap-4">
+               <div className="flex gap-2">
+                 <div className="w-3 h-3 rounded-full bg-brand-700"></div>
+                 <div className="w-3 h-3 rounded-full bg-brand-700"></div>
+                 <div className="w-3 h-3 rounded-full bg-brand-700"></div>
+               </div>
+               <div className="h-6 bg-brand-800/50 rounded-md w-64 mx-auto hidden md:block"></div>
+            </div>
+
+            {/* Dashboard Content */}
+            <div className="flex-1 p-6 md:p-10 grid grid-cols-12 gap-6 bg-brand-950/80">
+               {/* Left Col - Sidebar */}
+               <div className="hidden md:block col-span-3 space-y-4 border-r border-brand-800/50 pr-6">
+                  <div className="h-4 w-24 bg-brand-700 rounded mb-8"></div>
+                  <div className="space-y-3">
+                    <div className="h-3 w-full bg-brand-800/50 rounded"></div>
+                    <div className="h-3 w-3/4 bg-brand-800/50 rounded"></div>
+                    <div className="h-3 w-5/6 bg-brand-800/50 rounded"></div>
+                  </div>
+                  <div className="mt-auto pt-12">
+                     <div className="h-32 rounded-lg bg-gradient-to-br from-brand-900 to-brand-800 border border-brand-700/50 p-4 relative overflow-hidden">
+                        <div className="relative z-10">
+                          <div className="h-2 w-12 bg-cyan-500/50 rounded mb-2"></div>
+                          <div className="text-2xl font-bold text-white">4.2k</div>
+                          <div className="text-xs text-brand-400">Subscribers owned</div>
+                        </div>
+                        <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-cyan-500/10 rounded-full blur-xl"></div>
+                     </div>
+                  </div>
+               </div>
+
+               {/* Main Content - Embed live client site */}
+               <div className="col-span-12 md:col-span-9 flex flex-col gap-6">
+                  <div className="flex justify-between items-end mb-2">
+                    <div>
+                      <div className="h-3 w-32 bg-cyan-600 rounded mb-2"></div>
+                      <div className="h-8 w-64 md:w-96 bg-brand-800 rounded"></div>
+                    </div>
+                    <div className="h-10 w-10 bg-brand-800 rounded-full border border-brand-700"></div>
+                  </div>
+
+                  <div className="rounded-lg border border-brand-800 overflow-hidden bg-white h-[240px] md:h-[320px]">
+                    <iframe
+                      title="Scott Lane Insight Hub live demo"
+                      src="https://sl-insight.profile-server.com/scott-lane-insight-hub/"
+                      className="h-full w-full"
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+
+                  <p className="text-xs text-brand-400 text-left">Interactive demo: scroll inside this preview.</p>
+               </div>
             </div>
           </div>
         </div>
