@@ -707,26 +707,25 @@ function App() {
                   <input type="text" className="w-full bg-brand-900/50 border border-brand-600 rounded p-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors placeholder-brand-600" placeholder="Name" />
                 </div>
                 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-brand-400 uppercase tracking-wider mb-1">Email</label>
-                    <input type="email" className="w-full bg-brand-900/50 border border-brand-600 rounded p-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors placeholder-brand-600" placeholder="work@email.com" />
+                    <label className="block text-xs font-semibold text-brand-400 uppercase tracking-wider mb-1">Work Email</label>
+                    <input type="email" className="w-full bg-brand-900/50 border border-brand-600 rounded p-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors placeholder-brand-600" placeholder="you@company.com" />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-brand-400 uppercase tracking-wider mb-1">Phone</label>
-                    <input type="tel" className="w-full bg-brand-900/50 border border-brand-600 rounded p-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors placeholder-brand-600" placeholder="+1 ..." />
+                    <label className="block text-xs font-semibold text-brand-400 uppercase tracking-wider mb-1">Business Name</label>
+                    <input type="text" className="w-full bg-brand-900/50 border border-brand-600 rounded p-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors placeholder-brand-600" placeholder="Company" />
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-xs font-semibold text-brand-400 uppercase tracking-wider mb-1">Business Name</label>
-                  <input type="text" className="w-full bg-brand-900/50 border border-brand-600 rounded p-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors placeholder-brand-600" placeholder="Company" />
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                   <div>
-                    <label className="block text-xs font-semibold text-brand-400 uppercase tracking-wider mb-1">Job Title</label>
-                    <input type="text" className="w-full bg-brand-900/50 border border-brand-600 rounded p-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors placeholder-brand-600" placeholder="Title" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-brand-400 uppercase tracking-wider mb-1">Primary Goal</label>
+                    <select className="w-full bg-brand-900/50 border border-brand-600 rounded p-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors appearance-none text-sm">
+                      <option className="bg-brand-900 text-white">Grow owned audience</option>
+                      <option className="bg-brand-900 text-white">Build executive authority</option>
+                      <option className="bg-brand-900 text-white">Support pipeline with thought leadership</option>
+                    </select>
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-brand-400 uppercase tracking-wider mb-1">Executives</label>
@@ -739,8 +738,14 @@ function App() {
                   </div>
                 </div>
 
+                <div>
+                  <label className="block text-xs font-semibold text-brand-400 uppercase tracking-wider mb-1">Phone (optional)</label>
+                  <input type="tel" className="w-full bg-brand-900/50 border border-brand-600 rounded p-3 text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-colors placeholder-brand-600" placeholder="+44 ..." />
+                </div>
+
                 <div className="pt-2">
                   <Button fullWidth className="py-4 text-base shadow-lg shadow-cyan-900/20">Book a demo</Button>
+                  <p className="mt-3 text-xs text-brand-400">We usually reply within one business day.</p>
                 </div>
               </form>
             </div>
