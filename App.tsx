@@ -147,18 +147,11 @@ function App() {
           <div className="flex justify-between items-center h-20">
             <div className="flex-shrink-0">
               <div className="flex items-center gap-3 rounded-2xl border border-brand-200 bg-white/90 px-4 py-2 shadow-sm">
-                <div className="h-10 w-10 rounded-xl bg-cyan-500 shadow-[0_10px_20px_rgba(0,182,237,0.35)]"></div>
-                <div className="text-left">
-                  <div className="text-lg font-bold text-brand-900 leading-none">Vantage</div>
-                  <div className="mt-1 flex items-center gap-2 text-[11px] tracking-[0.08em] text-brand-400">
-                    <img
-                      src="/profile/profile-logo.png"
-                      alt="Profile logo"
-                      className="h-3.5 w-3.5 object-contain"
-                    />
-                    by Profile
-                  </div>
-                </div>
+                <img
+                  src="/vantage/vantage-logo-dark.svg"
+                  alt="Vantage by Profile"
+                  className="h-9 w-auto object-contain"
+                />
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-8">

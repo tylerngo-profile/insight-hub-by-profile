@@ -36,8 +36,11 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="text-sm text-white/70 lg:text-right">
-          <div className="text-lg font-semibold">Vantage</div>
-          <div className="text-white/50 mt-2">by Profile</div>
+          <img
+            src="/vantage/vantage-logo-light.svg"
+            alt="Vantage by Profile"
+            className="h-8 w-auto object-contain lg:ml-auto"
+          />
         </div>
       </div>
 
