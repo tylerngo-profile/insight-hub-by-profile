@@ -168,7 +168,7 @@ function App() {
         {/* Hero stays dark for B2B impact */}
         <Hero 
           onBookDemo={() => scrollToSection('contact')} 
-          onSeeHow={() => { window.location.href = 'https://sl-insight.profile-server.com/'; }} 
+          onSeeHow={() => window.open('https://sl-insight.profile-server.com/', '_blank', 'noopener,noreferrer')} 
         />
 
         {/* Trusted Logos */}
