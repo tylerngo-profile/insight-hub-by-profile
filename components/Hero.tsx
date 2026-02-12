@@ -73,7 +73,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
             <iframe
               title="Scott Lane Insight Hub live demo"
               src="https://sl-insight.profile-server.com/scott-lane-insight-hub/"
-              className="h-full w-full"
+              className="h-full w-full pointer-events-none"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               onLoad={() => setIframeLoaded(true)}
@@ -94,7 +94,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
           </div>
 
           <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs md:text-sm text-brand-300">
-            <span>Desktop: interactive live preview</span>
+            <span>Desktop: live preview (scroll-safe)</span>
             <span className="hidden md:inline">•</span>
             <a
               href="https://sl-insight.profile-server.com/scott-lane-insight-hub/"
