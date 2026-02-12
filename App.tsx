@@ -168,7 +168,7 @@ function App() {
         {/* Hero stays dark for B2B impact */}
         <Hero 
           onBookDemo={() => scrollToSection('contact')} 
-          onSeeHow={() => scrollToSection('how-it-works')} 
+          onSeeHow={() => scrollToSection('sample-hub-demo')} 
         />
 
         {/* Trusted Logos */}

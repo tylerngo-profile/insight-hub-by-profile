@@ -60,7 +60,7 @@ export const Hero: React.FC<HeroProps> = ({ onBookDemo, onSeeHow }) => {
           ))}
         </div>
 
-        <div className="mt-20 w-full max-w-6xl relative animate-fade-up anim-delay-600">
+        <div id="sample-hub-demo" className="mt-20 w-full max-w-6xl relative animate-fade-up anim-delay-600">
           <div className="absolute inset-0 bg-cyan-500/20 blur-[80px] rounded-full mix-blend-screen pointer-events-none opacity-40"></div>
 
           {/* Desktop: interactive live embed */}
